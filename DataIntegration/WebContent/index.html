@@ -1,0 +1,35 @@
+<HTML>
+<h2>Domain Access Server</h2></br><h3>Query Interface</h3>
+<h4>SPARQL Query</h4>
+<form action="/DataIntegration/QueryDistributionServiceImpl/SPARQL">
+<textarea name="query" rows="10" cols="75">
+SELECT ?s ?p ?o
+ WHERE {
+ ?s ?p ?o .
+}
+</textarea> << SPARQL Query </br>
+<select style="width: 628px" name="format">
+	<option name="JSON" value="application/json"> JSON </option>
+	<option name="XML" value="application/xml"> XML </option>
+	<option name="Plain Text" value="text/plain"> Plain Text </option>
+</select> << Response format </br>
+<input size="101" type="text" name="limit" value="10"/> << Response limit </br>
+<input size="101" type="text" name="offset" value="0"/> << Response offset </br>
+<input size="101" type="text" name="role" value=""/> << User role (e.g. http://comvantage.eu/ontologies/ac-schema/cv_wp6_fiat_employee) </br>
+<input type="submit" value="Submit">
+</form>
+<h4>SPARQL Update</h4>
+<form action="/DataIntegration/QueryDistributionServiceImpl/SPARUL">
+<textarea name="query" rows="10" cols="75"></textarea> << SPARUL Query</br>
+<input type="submit" value="Submit">
+</form>
+<h4>DHM</h4>
+<form action="/DataIntegration/QueryDistributionServiceImpl/DHM">
+<input size="101" type="text" name="host" /> << DHM host </br>
+<input size="101" type="text" name="dir" /> << Host directory </br>
+<input size="101" type="text" name="file" /> << Host file</br>
+<textarea name="arguments" rows="10" cols="75"></textarea> << Arguments </br>
+<input type="submit" value="Submit">
+</form>
+</HTML>
+</HTML>
